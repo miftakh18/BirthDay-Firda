@@ -1,0 +1,54 @@
+/* .container {
+  height: 100vh;
+
+  border: 3px solid green;
+  padding: 50% auto;
+}
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid blue;
+  height: 100%;
+} */
+@media only screen and (min-width: 768px) {
+  /* for desktop */
+  .bg {
+    background: url("../img/minion-lc.jpg");
+    background-size: cover;
+    /* background-position: center; */
+    /* position: relative; */
+  }
+  .bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 1, 1, 0.445); /* Slight overlay color */
+    backdrop-filter: blur(2px); /* Adjust blur intensity */
+    z-index: -1; /* Ensure it sits behind the main content */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="bg"] {
+    background: url("../img/minion-ptr.jpg");
+    background-size: cover;
+    /* background-position: center; */
+    /* position: relative; */
+  }
+  .bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 1, 1, 0.445); /* Slight overlay color */
+    backdrop-filter: blur(2px); /* Adjust blur intensity */
+    z-index: -1; /* Ensure it sits behind the main content */
+  }
+}

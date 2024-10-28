@@ -1,0 +1,35 @@
+.modal-content {
+  border-radius: 20px !important; /* Rounded corners */
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  font-family: Arial, Helvetica, sans-serif !important;
+
+  display: flex !important;
+  justify-content: center !important;
+}
+.modal-footer .btn {
+  border-radius: 5px !important; /* Rounded button */
+}
+
+/* SweetAlert2-like scale-up effect */
+.custom-scale-modal .modal-dialog {
+  transform: scale(0.5); /* Start at 50% of the full size */
+  opacity: 0; /* Start transparent */
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.35s ease; /* SweetAlert2 easing */
+}
+
+.custom-scale-modal.show .modal-dialog {
+  transform: scale(1); /* Scale to full size */
+  opacity: 1; /* Fully visible */
+}
+
+/* Smooth scale-down on close */
+.custom-scale-modal .modal-dialog {
+  transition: transform 0.25s ease-in, opacity 0.25s ease-in;
+}
+
+.custom-scale-modal:not(.show) .modal-dialog {
+  transform: scale(0.8); /* Slightly smaller on close */
+  opacity: 0;
+}
