@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom-popup.css" />
+
     <!-- <link rel="stylesheet" href="assets/plugin/PopUp-iOS/css/layer.css" />
     <link rel="stylesheet" href="assets/plugin/PopUp-iOS/css/public.css" /> -->
   </head>
@@ -30,25 +31,37 @@
       src="assets/audio/effect-button.mp3"
       preload="auto"
     ></audio>
+    <audio
+      id="click-sound2"
+      src="assets/audio/effect-notif.mp3"
+      preload="auto"
+    ></audio>
     <div class="container-fluid" id="content"></div>
     <div class="container-fluid" id="content-2">
-      <div class="container border vh-100">
-        <div class="d-flex justify-content-center pt-5">
-          <img
-            src="assets/img/firda.jpg"
-            class="profile-circle slide-down"
-            alt="..."
-          />
-        </div>
-
-        <div id="jam" class="fw-normal text-white text-center display-1"></div>
-        <div id="tanggal" class="fw-bold text-white text-center mb-5"></div>
-        <div class="card shadow-lg rounded-notif">
-          <div class="card-body text-wrap text-break">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Reprehenderit tempore porro mollitia numquam nesciunt blanditiis sit
+        <div class="container vh-100">
+          <div class="d-flex justify-content-center pt-5">
+            <img  src="assets/img/firda.jpg"  class="profile-circle slide-down"  alt="..." />
           </div>
-        </div>
+
+          <div id="jam" class="fw-normal text-white text-center display-1 slide-down"></div>
+          <div id="tanggal" class="fw-bold text-white text-center mb-2 slide-down"></div>
+
+          <div id="halaman_awal" class="fw-bold text-white text-center ">
+            <p>
+            <h1 class="typing-container " id="typing">
+                      Barakallah  
+              Fii Umrik Sayang &#128522;
+            </h1>
+
+            </p>
+            <div class="text-center"><button type="button" id="intipBuka" class="btn btn-outline-light shadow-lg rounded-custom"> Intip Jangan ?&#128140;
+            </button></div>
+          </div>
+          <div id="notifikasi">
+            <div class="card shadow-lg rounded-notif" id="notifikasi-box" >
+              <div class="card-body text-wrap text-break" id="notifikasi-body"></div>
+            </div>
+          </div>
       </div>
     </div>
 
