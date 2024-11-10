@@ -117,8 +117,8 @@ $(document).on("click", "#intipBuka", function () {
   if (typeof id === "undefined") {
     $("#notifikasi").html("");
     Swal.fire({
-      title: "Submit your Github username",
-      input: "text",
+      title: "Mungkin ada yang mau di sampaikan",
+      input: "textarea",
       inputAttributes: {
         autocapitalize: "off",
       },
@@ -126,31 +126,17 @@ $(document).on("click", "#intipBuka", function () {
       allowOutsideClick: false,
       confirmButtonText: "Look up",
       showLoaderOnConfirm: true,
-      preConfirm: async (login) => {
-        try {
-          const githubUrl = `
-            https://api.github.com/users/${login}
-          `;
-          const response = await fetch(githubUrl);
-          if (!response.ok) {
-            return Swal.showValidationMessage(`
-              ${JSON.stringify(await response.json())}
-            `);
-          }
-          return response.json();
-        } catch (error) {
-          Swal.showValidationMessage(`
-            Request failed: ${error}
-          `);
-        }
+      preConfirm: async (send) => {
+        const data = {
+          text: send,
+          no_hp: "081299700738",
+        };
+        return data;
       },
       allowOutsideClick: () => !Swal.isLoading(),
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire({
-          title: `${result.value.login}'s avatar`,
-          imageUrl: result.value.avatar_url,
-        });
+        window.location.href = `https://wa.me/${result.value.no_hp}?text=${result.value.text}`;
       }
     });
   } else {
