@@ -89,6 +89,7 @@ $(function () {
 });
 
 let content_part2 = ["tes Konten", "Konten 2"];
+let textBtn = "Selanjutnya ";
 $(document).on("click", "#intipBuka", function () {
   slideUpAndHide();
   let id = $(this).data("id");
@@ -110,7 +111,7 @@ $(document).on("click", "#intipBuka", function () {
       console.log(id);
       $("#btnNext").html(`<button type="button" id="intipBuka" ${
         id !== content_part2.length - 1 ? "data-id='" + btnId + "'" : ""
-      } class="btn btn-outline-light slide-down shadow-lg rounded-custom"> Intip Jangan ?&#128140;
+      } class="btn btn-outline-light slide-down shadow-lg rounded-custom"> ${textBtn}
           </button>`);
     }
   }, 1000);
@@ -123,9 +124,8 @@ $(document).on("click", "#intipBuka", function () {
         autocapitalize: "off",
       },
       showCancelButton: false,
-
       allowOutsideClick: false,
-      confirmButtonText: "Kirim",
+      confirmButtonText: "Kirim ke whatsapp",
       showLoaderOnConfirm: true,
       preConfirm: async (send) => {
         const data = {
@@ -134,7 +134,6 @@ $(document).on("click", "#intipBuka", function () {
         };
         return data;
       },
-      allowOutsideClick: () => !Swal.isLoading(),
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = `https://wa.me/${result.value.no_hp}?text=${result.value.text}`;
