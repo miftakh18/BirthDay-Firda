@@ -129,7 +129,7 @@ $(document).on("click", "#intipBuka", function () {
       preConfirm: async (send) => {
         const data = {
           text: send,
-          no_hp: "081299700738",
+          no_hp: "6281299700738",
         };
         return data;
       },
