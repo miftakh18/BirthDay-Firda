@@ -3,6 +3,8 @@
   .bg {
     background: url("../img/minion-lc.jpg");
     background-size: cover;
+    margin: 0 auto;
+    position: fixed;
     /* background-position: center; */
     /* position: relative; */
   }
@@ -17,6 +19,7 @@
     backdrop-filter: blur(7px); /* Adjust blur intensity */
     /* background-repeat: no-repeat;
     background-position: center top; */
+
     z-index: -1;
     background-size: cover;
   }
@@ -42,6 +45,7 @@
   [class*="bg"] {
     background: url("../img/minion-ptr.jpg");
     background-size: cover;
+
     /* Ensure it sits behind the main content */
     /* background-position: center; */
     /* position: relative; */
