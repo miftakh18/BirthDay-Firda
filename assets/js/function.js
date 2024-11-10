@@ -2,7 +2,7 @@ function modalCustom(id, body, btn) {
   return `<div class="modal fade custom-zoom" id="${id}" aria-labelledby="modalLabel" aria-hidden="true" >
                   <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content" style="background-color: #333; color: #fff">
-                          <div  class="modal-body fw-bold d-flex d-flex justify-content-center p-5">${body}</div>
+                          <div  class="modal-body fw-bold d-flex d-flex justify-content-center p-5"><center>${body}</center></div>
                           <div class="modal-footer">
                              ${btn}
                           </div>
