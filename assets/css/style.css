@@ -15,7 +15,9 @@
     bottom: 0;
     background-color: rgba(2, 1, 1, 0.445); /* Slight overlay color */
     backdrop-filter: blur(7px); /* Adjust blur intensity */
-    z-index: -1; /* Ensure it sits behind the main content */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
   }
 
   .profile-circle {
@@ -39,6 +41,7 @@
   [class*="bg"] {
     background: url("../img/minion-ptr.jpg");
     background-size: cover;
+    /* z-index: -1; Ensure it sits behind the main content */
     /* background-position: center; */
     /* position: relative; */
   }
@@ -58,7 +61,10 @@
     bottom: 0;
     background-color: rgba(2, 1, 1, 0.445); /* Slight overlay color */
     backdrop-filter: blur(7px); /* Adjust blur intensity */
-    z-index: -1; /* Ensure it sits behind the main content */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* pointer-events: none; */
   }
   .typing-container {
     font-family: "Yellowtail", cursive;

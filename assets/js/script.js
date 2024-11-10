@@ -122,9 +122,10 @@ $(document).on("click", "#intipBuka", function () {
       inputAttributes: {
         autocapitalize: "off",
       },
-      showCancelButton: true,
+      showCancelButton: false,
+
       allowOutsideClick: false,
-      confirmButtonText: "Look up",
+      confirmButtonText: "Kirim",
       showLoaderOnConfirm: true,
       preConfirm: async (send) => {
         const data = {
